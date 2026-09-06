@@ -1,0 +1,2 @@
+patchedDependencies:
+  expo-web-browser@57.0.2: patches/expo-web-browser@57.0.2.patch

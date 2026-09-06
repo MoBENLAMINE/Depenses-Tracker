@@ -1,25 +1,96 @@
 {
   "expo": {
-    "name": "DepensesTracker",
+    "name": "Dépenses Tracker",
     "slug": "DepensesTracker",
-    "version": "1.0.0",
+    "version": "5.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": ["com.mbenlamine.depensestracker", "depensestracker"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cette application utilise la caméra pour scanner des reçus de paiement.",
+        "NSFaceIDUsageDescription": "Utiliser Face ID pour déverrouiller l'application.",
+        "NSMicrophoneUsageDescription": "Utiliser le microphone pour la saisie vocale."
+      },
+      "bundleIdentifier": "com.mbenlamine.depensestracker"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#0E5A4C",
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "monochromeImage": "./assets/images/adaptive-icon.png"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "package": "com.mbenlamine.depensestracker"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Autoriser Dépenses Tracker à accéder à la caméra pour scanner les reçus."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#1B8C6E"
+        }
+      ],
+      "expo-file-system",
+      "expo-sharing",
+      "expo-image-picker",
+      "expo-document-picker",
+      "expo-status-bar",
+      "expo-font",
+      "expo-local-authentication",
+      "expo-background-task",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a"
+            ]
+          }
+        }
+      ],
+      [
+        "react-native-bootsplash",
+        {
+          "logo": "./assets/images/logo.png",
+          "logoWidth": 160,
+          "background": "#0E5A4C"
+        }
+      ]
+    ],
+    "extra": {
+      "drive": {
+        "webClientId": "991466319871-hhhjvckkavuavho94ar1kjjahlcc0a8c.apps.googleusercontent.com",
+        "iosClientId": "",
+        "androidClientId": "991466319871-11lb1h274bq5ef84tj74746id58j84n8.apps.googleusercontent.com"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }

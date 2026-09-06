@@ -16,6 +16,7 @@ expo-env.d.ts
 *.p8
 *.p12
 *.key
+*.keystore
 *.mobileprovision
 
 # Metro
@@ -33,9 +34,25 @@ yarn-error.*
 # local env files
 .env*.local
 
+# IDEs
+.idea/
+.vscode/
+.opencode/
+
+# temp files
+package.json.tmp
+
 # typescript
 *.tsbuildinfo
 
 # generated native folders
 /ios
 /android
+
+# LLM weights — téléchargés à la demande (voir Réglages > IA)
+assets/models/
+
+# Backend scan de reçus — secrets & artefacts locaux
+backend/.env
+backend/.venv/
+*.db

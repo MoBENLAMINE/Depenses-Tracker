@@ -1,0 +1,13 @@
+diff --git a/build/WebBrowser.js b/build/WebBrowser.js
+index 94441ac4cb712f0843c9ad9338beb202d3e4c8d6..bfbfbe68bd2202cf767a80f74e3bdf631f698f46 100644
+--- a/build/WebBrowser.js
++++ b/build/WebBrowser.js
+@@ -349,7 +349,7 @@ function _waitForRedirectAsync(returnUrl) {
+     // Note that this Promise never resolves when `returnUrl` is nullish
+     return new Promise((resolve) => {
+         const redirectHandler = (event) => {
+-            if (returnUrl && event.url.startsWith(returnUrl)) {
++            if (returnUrl && (event.url.startsWith(returnUrl) || event.url.startsWith(returnUrl.replace(':/', '://')))) {
+                 resolve({ url: event.url, type: 'success' });
+             }
+         };
