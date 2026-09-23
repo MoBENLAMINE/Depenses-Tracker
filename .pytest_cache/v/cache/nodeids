@@ -1,0 +1,15 @@
+[
+  "backend/tests/test_categorizer.py::test_embeddings_cosine_choisit_categorie",
+  "backend/tests/test_categorizer.py::test_embeddings_desactives_repli",
+  "backend/tests/test_categorizer.py::test_embeddings_quand_pas_de_mot_cle",
+  "backend/tests/test_categorizer.py::test_fallback_inconnu",
+  "backend/tests/test_categorizer.py::test_keywords_insensible_aux_accents",
+  "backend/tests/test_categorizer.py::test_keywords_marjane",
+  "backend/tests/test_categorizer.py::test_mots_cles_prioritaires_sur_embeddings",
+  "backend/tests/test_gemini.py::test_cache_avoids_second_call",
+  "backend/tests/test_gemini.py::test_parse_valid_json",
+  "backend/tests/test_gemini.py::test_requires_api_key",
+  "backend/tests/test_gemini.py::test_retry_exhausted_raises",
+  "backend/tests/test_gemini.py::test_retry_then_success",
+  "backend/tests/test_gemini.py::test_writes_cache_after_success"
+]
