@@ -38,8 +38,8 @@ export default function TabLayout() {
         },
         headerTintColor: c.text,
         headerShadowVisible: false,
-        // Marge droite = padding gauche du logo (≈78px) pour symétrie visuelle
-        headerRightStyle: { marginRight: 78 },
+        // Marge droite = padding gauche du logo pour symétrie visuelle
+        headerRightContainerStyle: { marginRight: 16 },
         tabBarActiveTintColor: c.primary,
         tabBarInactiveTintColor: c.textSecondary,
       } as any}
