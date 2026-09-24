@@ -20,6 +20,7 @@ function HeaderRight() {
       <ProfileAvatar
         size={36}
         onPress={() => router.push('/(tabs)/settings')}
+        style={{ marginRight: 4 }}
       />
     </View>
   );
