@@ -44,8 +44,8 @@ export function ProfileAvatar({ size = 36, onPress }: ProfileAvatarProps) {
     <View
       style={{
         position: 'absolute',
-        right: -1,
-        bottom: -1,
+        right: 2,
+        bottom: 2,
         width: size * 0.38,
         height: size * 0.38,
         borderRadius: size * 0.19,
